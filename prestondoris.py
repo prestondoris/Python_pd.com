@@ -1,12 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template, url_for, request
+from flask import redirect, flash, jsonify, make_response
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
+def resume():
     '''
     Main route for my resume page.
     '''
-    return "Hello World!!!!!!"
+    return render_template('resume.html')
 
 
 
