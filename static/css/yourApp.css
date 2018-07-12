@@ -1,0 +1,107 @@
+body {
+    position: relative;
+}
+
+#nav-bar {
+    background-color:transparent;
+    color: #4D4B50;
+}
+
+#nav-bar.active {
+    background-color: #E1E0DC;
+}
+
+.pcd-color {
+    color: #4D4B50;
+}
+
+.icon-bar {
+    background-color: #A97C53;
+    color: white;
+}
+
+#nav-bar-btn {
+    background-color: #A97C53;
+}
+
+#header-jumbotron {
+    background-image: url('static/images/JT_image.png');
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    text-align: center;
+}
+
+#jumbotron-container {
+    margin-top: 5rem;
+}
+
+#jumbotron-form {
+    width: 23.35rem;
+    margin: 0 auto;
+}
+
+#email-input-addon {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+#email-input {
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    width: 15rem;
+}
+
+#jumbotron-submit-button {
+    margin-left: .2em;
+    background-color: #A97C53;
+    border: solid 1px #A97C53;
+    color: black;
+}
+
+#body-container {
+    min-height: 53rem;
+    width: 100%;
+    overflow:hidden;
+    background-color:white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#body-container-container {
+    padding-top: 3em;
+}
+
+.card-deck {
+    margin-top: 3em;
+}
+
+#footer-container {
+    height: 25rem;
+    width: 100%;
+    background-color: #E0DDB1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#footer-container-container {
+    padding-top: 6rem;
+}
+
+#app-store-icon {
+    width:10rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #header-jumbotron {
+        background-image: url('static/iomages/JT_image_media.png');
+        background-position: bottom;
+        background-attachment: scroll;
+    }
+}

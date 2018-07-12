@@ -214,7 +214,7 @@
 
 #home-body-container {
     height: 40rem;
-    background-image: url('images/landing-jumbotron.jpg');
+    background-image: url('/static/images/landing-jumbotron.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -335,7 +335,7 @@
     overflow: hidden;
     margin: 0;
     z-index: 0;
-    background-image: url('images/study.jpg');
+    background-image: url('/static/images/study.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -544,7 +544,7 @@
 
 #experience-body-container {
     min-height: 110rem;
-    background-image: url('images/river.jpg');
+    background-image: url('/static/images/river.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -967,14 +967,14 @@
 
     #home-body-container {
         width: 100%;
-        background-image: url('images/landing-jumbotron_media.jpg');
+        background-image: url('/static/images/landing-jumbotron_media.jpg');
         background-attachment: scroll;
         margin: 0;
     }
 
     #education-body-container {
         width: 100%;
-        background-image: url('images/study_media.jpeg');
+        background-image: url('/static/images/study_media.jpeg');
         background-attachment: scroll;
         margin: 0;
     }

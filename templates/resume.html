@@ -48,7 +48,7 @@
       <meta name="keywords" content="Web Developer, Front End, HTML, CSS, Javascript, jQuery, Bootstrap, Responsive Web Design">
       <meta name="author" contents="Preston Doris">
       <title>Preston Doris - Web Developer</title>
-      <link rel="stylesheet" href="stylesheet.css">
+      <link rel="stylesheet" href="static/css/resume.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
   </head>
@@ -60,7 +60,7 @@
                   <hr class="collapsed-icon">
                   <hr class="collapsed-icon">
               </button>
-              <span><a id="brand-link" href="#home"><img id="brand-logo" src="images/LOGO2.png"></a></span>
+              <span><a id="brand-link" href="#home"><img id="brand-logo" src="static/images/LOGO2.png"></a></span>
           </div>
 
           <nav class="col-6" id="my-navbar">
@@ -71,7 +71,7 @@
                   <li class="dropdown">
                       <span class="link" id="portfolio">Portfolio</span>
                       <div class="dropdown-content">
-                          <a class="link" id="your-app" href="yourApp/your_app.html">YourApp</a>
+                          <a class="link" id="your-app" href="{{ url_for('yourApp') }}">YourApp</a>
                           <a class="link" id="weather" href="Weather/">Weather</a>
                           <a class="link" id="itemcatalog" target="blank" href="http://ec2-54-187-198-181.us-west-2.compute.amazonaws.com/">Item Catalog</a>
                           <a class="link" id="color-game" href="ColorGame/color.html">RGB Color Game</a>
@@ -83,7 +83,7 @@
           </nav>
 
           <div class="col-3 col-m-6" id="buttons">
-              <a href="Resume/Preston%20Doris%20Resume.pdf" target="blank"><button type="button" id="resume-button">Download Resume</button></a>
+              <a href="static/PrestonDorisResume.pdf" target="blank"><button type="button" id="resume-button">Download Resume</button></a>
           </div>
 
           <section id="dropdown-list">
@@ -115,7 +115,7 @@
 
               <figure class="col-6" id="headshot-container">
                   <div id="headshot-border">
-                      <img id="headshot" src="images/2%20copy.jpg" alt="Headshot of Preston Doris">
+                      <img id="headshot" src="static/images/headshot2.jpg" alt="Headshot of Preston Doris">
                   </div>
               </figure>
           </section>
@@ -160,7 +160,7 @@
                       <figure class="institution" id="udacity">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/udacity-logo.png" class="institution-img" id="udacity-logo" alt="Udacity logo">
+                                  <img src="static/images/udacity-logo.png" class="institution-img" id="udacity-logo" alt="Udacity logo">
                               </div>
                               <div class="box back">
                                   <p>Full Stack Web Developer Nanodegree</p>
@@ -175,7 +175,7 @@
                       <figure class="institution" id="udemy">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/udemy-logo.png" class="institution-img" id="udemy-logo" alt="Udemy logo">
+                                  <img src="static/images/udemy-logo.png" class="institution-img" id="udemy-logo" alt="Udemy logo">
                               </div>
                               <div class="box back">
                                   <p>Complete Web Developer Course 2.0</p>
@@ -190,7 +190,7 @@
                       <figure class="institution" id="cal-poly">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/CP_Logo.png" class="institution-img" id="cp-logo" alt="Cal Poly University logo">
+                                  <img src="static/images/CP_Logo.png" class="institution-img" id="cp-logo" alt="Cal Poly University logo">
                               </div>
                               <div class="box back">
                                   <p><strong>Bachelor of Science:<br>Mathematics</strong></p>
@@ -202,7 +202,7 @@
                       <figure class="institution" id="cca">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/CCA-logo.png" class="institution-img" id="cca-logo" alt="Cambridge Certification Authority logo">
+                                  <img src="static/images/CCA-logo.png" class="institution-img" id="cca-logo" alt="Cambridge Certification Authority logo">
                               </div>
                               <div class="box back">
                                   <p><strong>Certificate: Level 1</strong></p>
@@ -215,7 +215,7 @@
                       <figure class="institution" id="codecademy">
                           <div class="flip">
                               <div class="box front">
-                                  <img src="images/cc-logo.png" class="institution-img" id="cc-logo" alt="Codecademy logo">
+                                  <img src="static/images/cc-logo.png" class="institution-img" id="cc-logo" alt="Codecademy logo">
                               </div>
                               <div class="box back">
                                   <p><strong>Courses:</strong></p>
@@ -392,7 +392,7 @@
           </section>
       </footer>
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-      <script src="script.js" tyep="text/javascript"></script>
+      <script src="static/js/resume.js" tyep="text/javascript"></script>
 
   </body>
 </html>
