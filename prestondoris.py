@@ -11,7 +11,7 @@ def resume():
     return render_template('resume.html')
 
 
-@app.route("/yourApp")
+@app.route("/YourApp")
 def yourApp():
     return render_template('yourApp.html')
 
@@ -32,7 +32,7 @@ def weather():
 
 @app.route('/ColorGame')
 def colorGame():
-    return render_template('colorGame.html')
+    return render_template('color.html')
 
 
 @app.route('/ColorGame/color.html')

@@ -1,0 +1,34 @@
+html {
+    background: url(darrel-collins-40643.jpg);
+    background-position: center;
+    -webkit-position: center;
+    -moz-position: center;
+    -o-position: center;
+}
+
+body {
+    background: none;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10em;
+}
+
+.lead {
+    margin-top: 1em;
+}
+
+form {
+    margin-top: 3em;
+}
+
+.btn {
+    margin: 3em;
+}
+
+#message-title {
+    font-size: 1.2em;
+    margin: 0;
+    padding-bottom: .5em
+}
