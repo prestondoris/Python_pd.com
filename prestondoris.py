@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from flask import redirect, flash, jsonify, make_response
+import httplib2, ast, json
 
 app = Flask(__name__)
 
@@ -25,9 +26,24 @@ def yourAppRedirect():
     return redirect(url_for('yourApp'))
 
 
-@app.route('/Weather')
+@app.route('/Weather', methods=['GET', 'POST'])
 def weather():
-    return render_template('weather.html')
+    if request.method == 'GET':
+        return render_template('weather.html')
+    elif request.method == 'POST':
+        h = httplib2.Http()
+        apiKey = '&appid=3da34a83f84233570753c27d609311af'
+        url = 'https://api.openweathermap.org/data/2.5/weather?q='
+        city = request.form['city']
+        requestURL = url + city + apiKey
+        response, status = h.request(requestURL, 'GET')
+        if status == 200:
+            # do something
+            return render_template('weather.html')
+        else:
+
+            return render_template('weather.html')
+
 
 
 @app.route('/ColorGame')

@@ -25,7 +25,7 @@ body {
 }
 
 #header-jumbotron {
-    background-image: url('static/images/JT_image.png');
+    background-image: url('/static/images/JT_image.png');
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -100,7 +100,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     #header-jumbotron {
-        background-image: url('static/iomages/JT_image_media.png');
+        background-image: url('/static/images/JT_image_media.png');
         background-position: bottom;
         background-attachment: scroll;
     }

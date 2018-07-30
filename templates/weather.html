@@ -43,19 +43,18 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-        <link rel="stylersheet" href = "static/css/weather.css" >
+        <link rel="stylesheet" href = "static/css/weather.css" >
     </head>
     <body>
 
         <div class="container col-sm-6">
             <h1 class="display-3">Get the Weather!</h1>
             <p class="lead">Enter the name of the City.</p>
-            <form class="mx-auto" method="post">
+            <form class="mx-auto" onsubmit="getWeather()">
                 <div>
                     <input type="text" class="form-control form-control-lg" name="city" id="city" placeholder="Eg. San Francisco, London" >
                 </div>
-                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
             </form>
             <div id="weather">
               <!--<?php
