@@ -1,5 +1,6 @@
 html {
     background: url('/static/images/darrel-collins-40643.jpg');
+    font-family: 'Raleway', sans-serif;
     background-position: center;
     -webkit-position: center;
     -moz-position: center;
@@ -31,4 +32,15 @@ form {
     font-size: 1.2em;
     margin: 0;
     padding-bottom: .5em
+}
+
+#response {
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.flashList {
+  list-style-type: none;
+  color: whitesmoke;
+  font-size: 2em;
 }

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request
 from flask import redirect, flash, jsonify, make_response
-import httplib2, ast, json
+import json, requests
 
 app = Flask(__name__)
 
@@ -31,18 +31,23 @@ def weather():
     if request.method == 'GET':
         return render_template('weather.html')
     elif request.method == 'POST':
-        h = httplib2.Http()
         apiKey = '&appid=3da34a83f84233570753c27d609311af'
         url = 'https://api.openweathermap.org/data/2.5/weather?q='
         city = request.form['city']
         requestURL = url + city + apiKey
-        response, status = h.request(requestURL, 'GET')
-        if status == 200:
-            # do something
-            return render_template('weather.html')
+        r = requests.post(requestURL)
+        response = r.json()
+        if r.status_code == 200:
+            maxTemp = format(response['main']['temp_max']*(9/5)-459.67, '.1f')
+            minTemp = format(response['main']['temp_min']*(9/5)-459.67, '.1f')
+            weather = response['weather'][0]['description']
+            strResponse = 'The weather in '+ city + ' will have a high of ' + maxTemp+ ' ˚F, a low of ' + minTemp + ' ˚F with ' + weather
+            print(strResponse);
+            return render_template('weather.html', strResponse = strResponse)
         else:
-
-            return render_template('weather.html')
+            flash("There was an error loading the city, please try again")
+            strResponse = ''
+            return render_template('weather.html', strResponse = strResponse)
 
 
 
@@ -67,5 +72,6 @@ def mapRedirect():
 
 
 if __name__ == '__main__':
+    app.secret_key = 'super_secret_key'
     app.debug = True
     app.run(host='0.0.0.0', port=8080)
