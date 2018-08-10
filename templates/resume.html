@@ -325,7 +325,7 @@
           <div class="clear"></div>
 
           <section class="col-10" id="contact-container">
-              <section class="col-6 col-m-12">
+              <section class="col-6 col-m-12" id="form">
                   <form class="col-12" method="post">
                       <div class="col-12 col-m-12 form-container">
                           <input type="text" class="col-5-8 col-m-5-8 form-input" name="form-name" id="form-name" placeholder="Name"/>
@@ -339,14 +339,25 @@
                       </div>
                       <button type="submit" id="form-button">Submit</button>
                   </form>
-                  <div class="col-12" id="form-confirmation"> <? echo $error.$successMessage ?> </div>
+                  {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                      <article class="flashMessages">
+                          <ul class="flashList">
+                              {% for message in messages %}
+                                  <li><strong>{{ message }}</strong></li>
+                              {% endfor %}
+                          </ul>
+                      </article>
+
+                  {% endif %}
+                  {% endwith %}
               </section>
               <section class="col-6 col-m-12" id="contact-info-container">
                   <div class="col-12 col-m-12">
                       <h1>Preston Doris</h1>
-                      <h3>Full Stack Software Engineer</h3>
+                      <h3>Full Stack Web Developer</h3>
                       <p><strong>Phone:</strong><br>(925) 519-5071</p>
-                      <p><strong>Email:</strong><br>preston@prestondoris.com</p>
+                      <p><strong>Email:</strong><br>prestondoris@gmail.com</p>
                   </div>
               </section>
           </section>

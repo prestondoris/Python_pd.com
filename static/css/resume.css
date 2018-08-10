@@ -699,6 +699,7 @@
     float: none;
     margin: 0 auto;
     min-height: 29rem;
+    padding-top: 1em;
 }
 
 #title-contact {
@@ -711,11 +712,6 @@
     margin: 0 auto;
 }
 
-
-#contact-container > div:first-child {
-    height: 100%;
-    border-right: solid #f7dba7 2px;
-}
 
 #contact-container div form {
     float: right;
@@ -741,6 +737,15 @@
     margin: 0;
     background-color: white;
     font-size: 1.2rem;
+}
+
+.flashList {
+  list-style-type: none;
+  color: #404551;
+}
+
+#contact-info-container {
+  color: #404551;
 }
 
 #form-name {

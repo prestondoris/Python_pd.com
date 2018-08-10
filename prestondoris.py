@@ -1,15 +1,25 @@
 from flask import Flask, render_template, url_for, request
 from flask import redirect, flash, jsonify, make_response
 import json, requests
+import smtplib
 
 app = Flask(__name__)
+
+# 445431366476-vuntmmo05kl5vdel13e416pikba68bdc.apps.googleusercontent.com
+# PNzZr2WJFLE6i9LLyClx0msv
 
 @app.route("/", methods = ['GET', 'POST'])
 def resume():
     '''
     Main route for my resume page.
     '''
-    return render_template('resume.html')
+    if request.method == "GET":
+        return render_template('resume.html')
+    else:
+        flash('''I apologize, but the contact form is currently down right
+              now. Please send your inquires or requests to: 
+              prestondoris@gmail.com''')
+        return render_template('resume.html')
 
 
 @app.route("/YourApp")
